@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Tech Solution</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#" class="logo">📱 TECH</a>
+            </div>
+            <ul class="sidebar">
+                <li onclick="hideSidebar()"><a href="#">✖</a></li>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="categories.html">Categories</a></li>
+            </ul>
+
+            <ul>
+                <li class="hideOnMobile"><a href="../../index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="products.html">Products</a></li>
+                <li class="hideOnMobile"><a href="about.html">About Us</a></li>
+                <li class="hideOnMobile"><a href="cart.html">Cart</a></li>
+                <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+                <li class="hideOnMobile"><a href="categories.html">Categories</a></li>
+                <li class="menu-button" onclick="showSidebar()"><a href="#">☰</a></li>
+            </ul>
+            <div>
+                    <form class ="search"  action="html-files/search.html">
+                        <input type="text" placeholder="Search..."/>
+                        <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></button>
+                    </form>
+                    <a href="html-files/login.html" class="login-btn">Login</a>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Checkout</h2>
+        
+        <div class="checkout-items">
+            <!-- Cart items will display here -->
+        </div>
+
+        <div class="checkout-summary">
+            <p>Total Items: <span id="checkout-total-items">0</span></p>
+            <p>Total Amount: $<span id="checkout-total-amount">0.00</span></p>
+        </div>
+
+        <h3>Billing Information</h3>
+        <form id="checkout-form">
+            <label>
+                Full Name: <input type="text" name="name" required>
+            </label>
+            <label>
+                Email: <input type="email" name="email" required>
+            </label>
+            <label>
+                Address: <input type="text" name="address" required>
+            </label>
+            <label>
+                Phone: <input type="tel" name="phone" required>
+            </label>
+            <button type="submit">Place Order</button>
+        </form>
+
+        <p id="order-message"></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tech Solution. All rights reserved.</p>
+    </footer>
+
+    <script src="../scripts/cart.js"></script>
+    <script src="../scripts/checkout.js" defer></script>
+</body>
+</html>
