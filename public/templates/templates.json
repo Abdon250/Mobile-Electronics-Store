@@ -1,0 +1,3 @@
+{
+  "productCard": "<div class='category-item'>{{image}}{{name}}{{price}}{{description}}{{addToCartBtn}}</div>"
+}

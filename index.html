@@ -1,13 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mobile-electronics-store</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Electronics Store</title>
+    <meta name="description" content="Responsive e-commerce platform with dynamic products, localized prices, and shopping cart.">
+    <meta name="author" content="TUYIZERE Niyogisubizo Abdon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/styles/style.css">
+
+    <script type="module" src="/scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Mobile Electronics Store</a>
+        </div>
+        <a id="menu-toggle" href="#" class="menu-button">☰</a>
+        <nav>
+            <ul class="nav-links hideOnMobile">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search products...">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner / Hero Image -->
+        <section class="banner">
+            <img src="images/banner.jpg" alt="Shop Electronics" class="banner-image">
+        </section>
+
+        <!-- Categories Section -->
+        <section class="category-list" id="home-category-list">
+            <!-- Categories dynamically rendered via JS -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> TUYIZERE N. Abdon. KIGALI</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
 </html>
