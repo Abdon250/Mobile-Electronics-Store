@@ -12,23 +12,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="src/styles/style.css">
-
-    <script type="module" src="/scripts/main.js" defer></script>
+    <script type="module" src="src/scripts/getdates.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html">Mobile Electronics Store</a>
-        </div>
-        <a id="menu-toggle" href="#" class="menu-button">☰</a>
-        <nav>
-            <ul class="nav-links hideOnMobile">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="categories.html">Categories</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <a id="logo" href="index.html">MES.</a>
+        
+            <nav>
+                <a id="menu-toggle" href="#">☰</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+        </di>
         <div class="search">
             <form id="search-form">
                 <input type="text" id="search-input" placeholder="Search products...">
@@ -38,14 +38,14 @@
     </header>
 
     <main>
-        <!-- Banner / Hero Image -->
+        
         <section class="banner">
-            <img src="images/banner.jpg" alt="Shop Electronics" class="banner-image">
+            <img src="/public/images/electronics.avif" alt="Shop Electronics" class="banner-image">
         </section>
 
-        <!-- Categories Section -->
+        
         <section class="category-list" id="home-category-list">
-            <!-- Categories dynamically rendered via JS -->
+            <!-- Categories dynamically -->
         </section>
     </main>
 
