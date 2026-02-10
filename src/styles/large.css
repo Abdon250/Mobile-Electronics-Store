@@ -1,0 +1,42 @@
+@media (min-width:600px){
+    
+    #menu-toggle {
+        display: none;
+    }
+    .header-content {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+    }
+    .header-content > nav:first-of-type {
+        margin-left: auto;
+        margin-right: 2rem;
+    }
+    .header-content .nav-links{
+        display: flex;
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+       
+    }
+    .nav-links a {
+        color: #ffffff;
+    }
+    .nav-icons {
+        display: flex;
+        gap: 1rem;
+
+    }
+    .nav-icons a {
+        display: flex;
+        align-items: center;
+    }
+    .search{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
