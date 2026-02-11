@@ -1,17 +1,21 @@
 import { defineConfig } from "vite";
-import { resolve } from "path";
+
 
 export default defineConfig({
+  root: ".", 
+  publicDir: "public", 
   build: {
+    outDir: "dist",  
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        products: resolve(__dirname, "src/html/products.html"),
-        categories: resolve(__dirname, "src/html/categories.html"),
-        cart: resolve(__dirname, "src/html/cart.html"),
-        checkout: resolve(__dirname, "src/html/checkout.html"),
-        signin: resolve(__dirname, "src/html/signin.html"),
-        signup: resolve(__dirname, "src/html/signup.html")
+        main: "index.html",
+        products: "src/html/products.html",
+        categories: "src/html/categories.html",
+        cart: "src/html/cart.html",
+        checkout: "src/html/checkout.html",
+        login: "src/html/login.html",
+        signup: "src/html/signup.html"
       }
     }
   }
