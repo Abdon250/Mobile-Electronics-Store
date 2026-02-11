@@ -35,14 +35,19 @@ body{
 
 header{  
     background-color: #006EB6;
-    height: 10%;
+    height: 20%;
     align-items: center;
+}
+nav {
+    position: relative;
 }
 .header-content {
     display: flex;
     align-items: center;
     padding: 1rem;
+    flex-wrap: wrap;
 }
+
 .header-content > nav:first-of-type {
     margin-left: auto;
     margin-right: 2rem;
@@ -68,9 +73,11 @@ nav a:hover {
     color: #ffffff;
     font-size: 2rem;
 }
+
 .nav-links{
    
     display: none;
+    color: #ffffff;
     
 }
 
@@ -79,7 +86,9 @@ nav a:hover {
 
 
 .nav-links.show{
-    display: flex;
+    display: grid;
+    list-style: none;
+
 }
 
 
@@ -94,10 +103,28 @@ form{
     gap: 10px;
 }
 
-.search{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+
+@media (max-width:600pX){
+    
+   .search {
+        order: 2;
+        width: 100%;
+        margin-top: 0.001rem;
+        margin-left: 8rem;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #006EB6;
+        padding: 1rem;
+        gap: 0.75rem;
+        
+        border-radius: 0.5rem;
+    }
+    .nav-links a {
+        color: #ffffff;
+    }
 }
 .search input{
     width: 80%;
@@ -113,15 +140,15 @@ form{
     border: none;
     border-radius: 7px;
 }   
-    
-.logo a{
+
+#logo{
     margin: 0;
     padding: 0;
     font-size: 50px;
     font-weight: bold;
     color: #e3e3e3;
     text-decoration: none;
-    padding: 8px 12px white;
+    padding: 8px 12px #ffffff;
     display: flex;
     border-radius: 7px;
     border: 1px solid #e3e3e3;
