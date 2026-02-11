@@ -1,14 +1,12 @@
+import { loadHeaderFooter } from "./mjs/loadHeaderFooter.mjs";
+import { initHeaderFooterFeatures } from "./mjs/headerFooterFeatures.mjs";
 
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', function (e) {
-    e.preventDefault();
-    navLinks.classList.toggle('show');
-    
-    if (navLinks.classList.contains("show")){
-       menuToggle.textContent = "✖";
-    } else {
-        menuToggle.textContent = "☰";
-    }
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadHeaderFooter();           
+    initHeaderFooterFeatures();         
 });
+
+
+
+
+
