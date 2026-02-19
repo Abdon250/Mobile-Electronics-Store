@@ -14,16 +14,61 @@
     <link rel="stylesheet" href="../styles/large.css">
     <link rel="stylesheet" href="../styles/style.css">
     <script type="module" src="../scripts/main.js" defer></script>
+    <script type="module" src="../scripts/main2.js" defer></script>
 </head>
 <body>
     <header id="header"></header>
 
-    <main>
-        
-        <section class="category-list" id="home-category-list">
-            <!-- Categories dynamically -->
-        </section>
+   <main class="checkout-page" >
+        <h2>Checkout</h2>
+
+        <!-- Cart Items -->
+        <div class="checkout-items">
+            <!-- JS will dynamically render cart items here -->
+        </div>
+
+        <form id="checkout-form" class="checkout-form">
+            <div class="form-group">
+              <label for="checkout-name">Full Name</label>
+              <input type="text" id="checkout-name" name="name" placeholder="John Doe" required />
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-email">Email</label>
+              <input type="email" id="checkout-email" name="email" placeholder="john@example.com" required />
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-address">Address</label>
+              <input type="text" id="checkout-address" name="address" placeholder="123 Main St, City" required />
+              <span class="error-message"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-phone">Phone Number</label>
+              <input type="tel" id="checkout-phone" name="phone" placeholder="0712345678" required />
+              <span class="error-message"></span>
+            </div>
+
+            <button type="submit" class="checkout-btn">Place Order</button>
+          </form>
+
+          <!-- Totals -->
+          <div class="checkout-summary">
+            <!-- Cart Items -->
+            <div class="checkout-items">
+                <!-- JS will dynamically render cart items here -->
+            </div>
+            <p>Total Items: <span id="checkout-total-items">0</span></p>
+            <p>Total Amount: $<span id="checkout-total-amount">0.00</span></p>
+          </div>
+
+          <p id="order-message" style="color:green; font-weight:bold;"></p>
+
     </main>
+
 
     <footer id="footer"></footer>
 </body>

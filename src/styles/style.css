@@ -5,10 +5,18 @@
   --background: #F8FAFC;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--background);
-  color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 200vh;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--primary);
 }
 
 
@@ -18,24 +26,8 @@ body {
     box-sizing: border-box;
    
 }
-html, body{
-    height: 100%;
-}
-body{
-    min-height: 100vh;
-    display: flex;
-    font-family: 'Arial', sans-serif;
-    background-color:whitesmoke;
-    color: #333;
-    line-height: 1.6;
-    padding: 20px;
-    flex-direction: column;
-    position:relative;
-}
-
 header{  
     background-color: #006EB6;
-    height: 20%;
     align-items: center;
 }
 nav {
@@ -90,10 +82,6 @@ nav a:hover {
     list-style: none;
 
 }
-
-
-
-
 
 form{
     width: 90%;
@@ -205,12 +193,13 @@ a{
 }
 
 footer{
+  
     text-align: center;
     padding: 20px;
     background-color: #006EB6;
     color: #e3e3e3;
-    margin-top: 20px;
-    border-radius: 10px;
+    
+    
 }
 /* login page styles */
 .login{
@@ -364,6 +353,174 @@ footer{
     justify-content: center;
 }
 
-.checkcout-btn:hover{
-    background-color: #00509E;
+
+
+
+#product-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+    border: 1px solid gray;
 }
+
+
+/* Product scrollable container */
+#product-list.scrollable {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+}
+
+#product-list.scrollable .category-item {
+    min-width: 250px;
+    flex: 0 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+/* Images */
+#product-list img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Quantity input */
+.quantity-input {
+    width: 50px;
+}
+
+/* Optional: hide scrollbar in some browsers */
+#product-list.scrollable::-webkit-scrollbar {
+    height: 8px;
+}
+
+#product-list.scrollable::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+
+div.category-item imgEl{
+    width: 100px;
+    height: 100px;
+}
+
+/* Product item styles */
+.item-details {
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: space-between;
+    
+    
+}
+.item-details img {
+    
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+}
+.item-details h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #006EB6;
+    margin-right: 20px;
+}
+.item-details p {
+    margin: 5px 0;
+    font-size: 16px;
+    margin-right: 20px;
+}       
+.item-details .remove-btn {
+    margin-top: 10px;
+    justify-content: right;
+    align-items: center;
+    
+}
+.checkout-btn{
+    color:white;
+    background-color:#006EB6;
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+.add-cart {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #006EB6;
+    color: #e3e3e3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.add-cart:hover {
+    background-color: gray;
+}
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* checkout page styles */
+
+#checkout-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 2px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+
+}
+
+.checkout-items{
+    margin-bottom: 20px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+.checkout-summary{
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+    
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    display: block;
+}
+.success {
+    color: green;
+    font-size: 0.9rem;
+    margin-top: 2px;
+    display: block;
+}
+
+

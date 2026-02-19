@@ -13,7 +13,8 @@
      
     <link rel="stylesheet" href="src/styles/large.css">
     <link rel="stylesheet" href="src/styles/style.css">
-    <script type="module" src="src/scripts/main.js"></script>
+    <script type="module" src="src/scripts/main.js" defer></script>
+    <script type="module" src="src/scripts/main2.js" defer></script>
     
 </head>
 <body>
@@ -25,10 +26,19 @@
             <img src="/public/images/electronics.avif" alt="Shop Electronics" class="banner-image">
         </section>
 
-        
+        <h1>Shop by Category</h1>
         <section class="category-list" id="home-category-list">
             <!-- Categories dynamically -->
         </section>
+        <section class="categories">
+    
+
+  <!-- Trending / Featured Products -->
+  <section class="category-list" id="home-featured">
+    <h2>Trending Products</h2>
+    <div class="product-list" id="featured-products"></div>
+    
+  </section>
     </main>
 
     <footer id="footer"></footer>

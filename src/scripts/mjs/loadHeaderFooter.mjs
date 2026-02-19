@@ -1,5 +1,4 @@
 
-
 import { loadTemplate, renderWithTemplate } from "./utils.mjs";
 
 export async function loadHeaderFooter() {
@@ -15,4 +14,6 @@ export async function loadHeaderFooter() {
 
     renderWithTemplate(headerTemplate, headerElement);
     renderWithTemplate(footerTemplate, footerElement);
+
+    document.dispatchEvent(new Event("headerLoaded"));
 }
