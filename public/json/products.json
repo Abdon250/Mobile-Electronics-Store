@@ -1,4 +1,4 @@
-{
+/*{
   "categoryBrands": {
     "phones": [
       { "name": "Apple", "image": "/images/phones.jpeg" },
@@ -91,4 +91,4 @@
       ]
     }
   }
-}
+}*/
